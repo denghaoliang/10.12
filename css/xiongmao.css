@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, html body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  html body header, html body header img {
+    width: 16.52rem;
+    height: 7.44rem; }
+  html body nav {
+    font-size: 0.72rem;
+    width: 16.48rem;
+    height: 6.08rem; }
+    html body nav div {
+      width: 3.52rem;
+      height: 0.88rem;
+      font-weight: bold;
+      margin-top: 0.44rem;
+      margin-left: 6.56rem;
+      text-align: center;
+      line-height: 0.88rem;
+      position: relative; }
+      html body nav div:after {
+        content: "";
+        position: absolute;
+        top: -0.12rem;
+        left: -0.24rem;
+        width: 0rem;
+        height: 0rem;
+        border: 0.24rem black solid;
+        border-color: black transparent transparent transparent;
+        transform: rotate(119deg); }
+      html body nav div:before {
+        content: "";
+        position: absolute;
+        bottom: -0.16rem;
+        right: -0.24rem;
+        width: 0rem;
+        height: 0rem;
+        border: 0.24rem black solid;
+        border-color: black transparent transparent transparent;
+        transform: rotate(-75deg); }
+    html body nav p {
+      font-size: 0.64rem;
+      line-height: 1.28rem;
+      padding-left: 0.88rem;
+      padding-right: 0.8rem; }
+      html body nav p span {
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        text-align: center;
+        background: #d32c57;
+        border-radius: 50%;
+        line-height: 1.6rem;
+        margin-right: 0.16rem; }
+  html body section {
+    flex: 1;
+    height: 100%;
+    width: 15.52rem;
+    margin: 0 auto;
+    overflow: auto; }
+    html body section ul {
+      width: 100%;
+      height: 6.08rem;
+      border-bottom: solid 1px #c3c3c3;
+      background: url(../img/mao.png) no-repeat;
+      background-size: 5.44rem 5.44rem;
+      background-position: 0 0;
+      margin-top: 0.68rem; }
+    html body section li {
+      margin-left: 6rem;
+      font-size: 0.76rem;
+      list-style: none;
+      line-height: 1rem; }
+      html body section li span:nth-child(1) {
+        color: #d32c57;
+        font-weight: bolder;
+        padding-right: 0.56rem;
+        font-size: 0.8rem; }
+      html body section li span:nth-child(2) {
+        color: #909090;
+        font-size: 0.48rem;
+        text-decoration: line-through; }
+      html body section li a {
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        font-size: 0.64rem;
+        text-decoration: none;
+        width: 4.4rem;
+        height: 1.36rem;
+        border-radius: 0.2rem;
+        text-align: ccenter;
+        line-height: 1.36rem; }
+        html body section li a:nth-child(1) {
+          background: #10c3ab;
+          margin-right: 0.6rem; }
+        html body section li a:nth-child(2) {
+          background: #db2e5b; }
+  html body footer {
+    width: 100%;
+    height: 2rem;
+    background-color: lightblue; }
+
+/*# sourceMappingURL=xiongmao.css.map */
