@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<style>
+			.box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box"></div>
+		
+	</body>
+	<script>
+		var box=document.getElementById("box");
+
+//		box.onclick=function(){
+//			alert("1")
+//		}
+//		box.addEventListener("click",function(){
+//		       alert("a")
+//		})
+		box.addEventListener("touchstart",function(ev){
+			this.innerHTML=ev.changedTouches.length
+			console.log("touchstart")
+		})
+		box.addEventListener("touchmove",function(ev){
+			this.innerHTML=ev.changedTouches.length
+			console.log("move")
+			
+		})
+		box.addEventListener("touchend",function(ev){
+			this.innerHTML=ev.changedTouches.length
+			console.log("end")
+			
+		})
+		
+	</script>
+
+</html>
