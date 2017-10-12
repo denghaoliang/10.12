@@ -8,7 +8,7 @@
 			html,body{
 				width: 100%;
 				height: 100%;
-				/*overflow: hidden;*/
+				overflow: hidden;
 				margin: 0;
 				padding: 0;
 			}
@@ -17,6 +17,7 @@
 				height: 100%;
 				/*transition: all 0.5s;*/
 				display: flex;
+				position: absolute;
 			}
 			.box li{
 				width: 100%;
@@ -51,7 +52,9 @@
 	  		})
 	  		box.addEventListener("touchend",function(ev){
 	  			var n=Math.round(box.offsetLeft/w);
+	  			console.log(n)
 	  			if(n>0){
+	  				
 	  				n=0
 	  			}
 	  			if(-n>=lis.length){
