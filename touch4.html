@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/ku.js" ></script>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;
+				/*overflow: hidden;*/
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+				height: 100%;
+				/*transition: all 0.5s;*/
+				display: flex;
+			}
+			.box li{
+				width: 100%;
+				float: left;
+				flex-shrink:0;
+				list-style: none;
+				font-size: 50px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="box" id="box">
+			<li>aa1</li>
+			<li>aa2</li>
+			<li>aa3</li>
+			<li>aa4</li>
+			
+		</ul>
+	</body>
+	  <script>
+	  	var box=document.getElementById("box")
+	  	var lis=box.getElementsByTagName("li")
+//	  	 var hins=new Hammer(box)
+	  	var w=lis[0].offsetWidth;
+	  	box.addEventListener("touchstart",function(ev){
+	  		var pos_init =ev.changedTouches[0].clientX;
+	  		var left=box.offsetLeft;
+	  		box.addEventListener("touchmove",function(ev){
+	  			var dis=ev.changedTouches[0].clientX-pos_init;
+	  			box.style.left=left+dis+"px";
+	  		})
+	  		box.addEventListener("touchend",function(ev){
+	  			var n=Math.round(box.offsetLeft/w);
+	  			if(n>0){
+	  				n=0
+	  			}
+	  			if(-n>=lis.length){
+	  				n=-(lis.length-1);
+	  			}
+	  			box.style.left=n*w+"px"
+	  		})
+	  		
+	  	})
+	  	
+	  	
+	  </script>
+</html>
