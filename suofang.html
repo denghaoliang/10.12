@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<script type="text/javascript" src="js/ku.js" ></script>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;
+				/*overflow: hidden;*/
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 375px;
+				height: 375px;
+				transition: all 0.5s;
+				background: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box">
+			
+			
+		</div>
+	</body>
+	  <script>
+	  	var box=document.getElementById("box")
+//	  	var lis=box.get
+	  	 var hins=new Hammer(box)
+	  	     hins.get('pinch').set({ enable: true });
+	  	     hins.on("pinchin",function(){
+	  	     	sc-=0.03
+	  	     	if(sc<0.1){
+	  	     		sc=0.1
+	  	     	}
+	  	     	box.style.webkitTransform="scale("+sc+")";
+	  	     })
+	  	     hins.on("pinchout",function(){
+	  	     	sc+=0.03;
+	  	     	if(sc>3){
+	  	     		sc=3;
+	  	     	}
+	  	     	box.style.webkitTransform="scale("+sc+")";
+	  	     	
+	  	     })
+	  
+	  </script>
+</html>
